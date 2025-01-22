@@ -1,0 +1,33 @@
+.text-field {
+    -fx-border-color: #0071ff;
+    -fx-background-insets: 0, 0 0 1 0 ;
+    -fx-background-radius: 0 ;
+    -fx-shape: "M200,0 H0 V30 H170 Z";
+}
+.text-field:focused {
+    -fx-background-color: -fx-focus-color, -fx-background ;
+}
+
+.button {
+    -jfx-button-type: RAISED;
+    -fx-background-color: #ff4938;
+    -fx-text-fill: white;
+}
+
+.button:hover {
+    -fx-background-color: #00fff7;
+    -fx-text-fill: #FFF;
+}
+
+.button:pressed {
+    -fx-background-color: #00ebff;
+    -fx-text-fill: #FFF;
+}
+
+#AnchorPane {
+    -fx-background-color: lightgreen;
+}
+
+#AnchorPane2 {
+    -fx-background-color: #5759ff;
+}

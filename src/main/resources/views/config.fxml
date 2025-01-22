@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="495.0" prefWidth="1131.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.sergio.melado.m13.controllers.ConfigController">
+   <children>
+      <SplitPane dividerPositions="0.5" prefHeight="518.0" prefWidth="1131.0" styleClass="fons_formulari">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="775.0" prefWidth="582.0" styleClass="fons_formulari" stylesheets="@../styles/stylesApp.css">
+               <children>
+                  <Label layoutX="20.0" layoutY="466.0" text="Tipus anotacio Mapa: *">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="cbAnotacioMapa" layoutX="281.0" layoutY="461.0" prefHeight="31.0" prefWidth="249.0" />
+                  <Label layoutX="17.0" layoutY="293.0" text="Cos del correu de bloqueig: *">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="17.0" layoutY="229.0" text="Assumpte del correu de bloqueig: *">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="101.0" layoutY="14.0" prefHeight="63.0" prefWidth="360.0" text="Configuracio del Sistema" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="25.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="15.0" layoutY="122.0" prefHeight="27.0" prefWidth="148.0" text="Numero d'intents: *">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="177.0" text="Maxim de caracters de la contrasenya: *">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="tfNumIntents" layoutX="281.0" layoutY="120.0" prefHeight="31.0" prefWidth="249.0" styleClass="text-field_normal" />
+                  <TextField fx:id="tfCaractersContrasenya" layoutX="281.0" layoutY="171.0" prefHeight="31.0" prefWidth="249.0" styleClass="text-field_normal" />
+                  <TextField fx:id="tfAssumpteCorreu" layoutX="281.0" layoutY="223.0" prefHeight="31.0" prefWidth="249.0" styleClass="text-field_normal" />
+                  <TextArea fx:id="taCosCorreu" layoutX="281.0" layoutY="276.0" prefHeight="154.0" prefWidth="249.0" styleClass="text-field_normal" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" styleClass="fons_formulari" stylesheets="@../styles/stylesApp.css">
+               <children>
+                  <Label layoutX="133.0" layoutY="25.0" text="Configuracio InfluxDB">
+                     <font>
+                        <Font name="System Bold" size="25.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="42.0" layoutY="93.0" text="InfluxDB Host: *">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="42.0" layoutY="144.0" text="InfluxDB Port: *">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="42.0" layoutY="192.0" text="InfluxDB Usuari: *">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="42.0" layoutY="247.0" text="InfluxDB Password: *">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <CheckBox fx:id="cbEnableSsl" layoutX="190.0" layoutY="321.0" mnemonicParsing="false" text="Enable SSL">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </CheckBox>
+                  <TextField fx:id="tfInfluxDBHost" layoutX="221.0" layoutY="88.0" styleClass="text-field_normal" />
+                  <TextField fx:id="tfInfluxDBPort" layoutX="221.0" layoutY="139.0" styleClass="text-field_normal" />
+                  <TextField fx:id="tfInfluxDBUsuari" layoutX="221.0" layoutY="187.0" styleClass="text-field_normal" />
+                  <PasswordField fx:id="pfInfluxDBPassword" layoutX="221.0" layoutY="242.0" styleClass="text-field_normal" />
+                  <Button id="buttons" fx:id="btGuardarConfig" layoutX="260.0" layoutY="432.0" maxHeight="46.0" maxWidth="35.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#btGuardarConfigOnAction" prefHeight="46.0" prefWidth="35.0" styleClass="btguardar" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

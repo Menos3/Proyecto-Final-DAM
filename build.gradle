@@ -1,0 +1,48 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group 'sergio.melado'
+version '1.0'
+
+sourceCompatibility = JavaVersion.VERSION_1_8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    //JUnit
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    testCompile group: 'org.junit.jupiter', name: 'junit-jupiter', version: '5.6.0-M1'
+
+    //Hibernate
+    compile group: 'org.hibernate', name: 'hibernate-core', version: '5.4.10.Final'
+    compile group: 'javax.persistence', name: 'javax.persistence-api', version: '2.2'
+
+    //MariaDB
+    compile group: 'org.mariadb.jdbc', name: 'mariadb-java-client', version: '2.5.0'
+
+    //GMail
+    compile group: 'com.sun.mail', name: 'javax.mail', version: '1.6.2'
+
+    compile group: 'commons-codec', name: 'commons-codec', version: '1.10'
+    compile group: 'commons-configuration', name: 'commons-configuration', version: '1.10'
+    compile group: 'org.jasypt', name: 'jasypt', version: '1.9.2'
+
+    //Mapa
+    compile group: 'com.sothawo', name: 'mapjfx', version: '1.32.0'
+    compile group: 'ch.qos.logback', name: 'logback-classic', version: '1.2.3'
+
+    //InfluxDB
+    compile group: 'org.influxdb', name: 'influxdb-java', version: '2.17'
+
+    //Conversio a PDF per el JasperReports
+    compile group: 'com.lowagie', name: 'itext', version: '2.1.7'
+
+    //JasperReports
+    compile group: 'net.sf.jasperreports', name: 'jasperreports', version: '6.12.2'
+
+}

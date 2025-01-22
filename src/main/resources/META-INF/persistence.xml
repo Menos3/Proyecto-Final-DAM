@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<persistence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence
+             http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+             version="2.0" xmlns="http://java.sun.com/xml/ns/persistence">
+
+    <persistence-unit name="mariaDB">
+        <!-- Classes amb les que es treballa -->
+        <class>org.sergio.melado.m13.models.Usuari</class>
+        <class>org.sergio.melado.m13.models.Config</class>
+        <class>org.sergio.melado.m13.models.Dispositiu</class>
+
+        <properties>
+            <property name="javax.persistence.jdbc.driver" value="org.mariadb.jdbc.Driver"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:mariadb://iwine.ddns.net/smelado_m13"/>
+            <property name="javax.persistence.jdbc.user" value="smelado"/>
+
+            <!-- Propietats Hibernate -->
+            <property name="hibernate.generate_statistics" value="true" /> <!-- No en producció -->
+            <property name="hibernate.show_sql" value="true"/> <!-- No en producció -->
+            <property name="hibernate.format_sql" value="true"/> <!-- No en producció -->
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MariaDB10Dialect"/>
+            <property name="hibernate.hbm2ddl.auto" value="validate"/>
+
+
+            <!-- Propietats Connection Pool -->
+            <property name="hibernate.c3p0.min_size" value="5"/>
+            <property name="hibernate.c3p0.max_size" value="20"/>
+            <property name="hibernate.c3p0.timeout" value="500"/>
+            <property name="hibernate.c3p0.max_statements" value="50"/>
+            <property name="hibernate.c3p0.idle_test_period" value="2000"/>
+        </properties>
+    </persistence-unit>
+
+    <persistence-unit name="test">
+
+        <class>org.sergio.melado.m13.models.Usuari</class>
+        <class>org.sergio.melado.m13.models.Config</class>
+        <class>org.sergio.melado.m13.models.Dispositiu</class>
+
+        <!-- NOMÉS CLASSES RELACIONADES AMB LA BBDD -->
+
+        <properties>
+            <property name="javax.persistence.jdbc.driver" value="org.mariadb.jdbc.Driver"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:mariadb://iwine.ddns.net/smelado_m13"/>
+            <property name="javax.persistence.jdbc.user" value="smelado"/>
+            <property name="javax.persistence.jdbc.password" value="smelado"/>
+
+            <!-- Propietats Hibernate -->
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MariaDB10Dialect"/>
+            <property name="hibernate.hbm2ddl.auto" value="validate"/>
+
+            <!-- Propietats Connection Pool -->
+            <property name="hibernate.c3p0.min_size" value="5"/>
+            <property name="hibernate.c3p0.max_size" value="20"/>
+            <property name="hibernate.c3p0.timeout" value="500"/>
+            <property name="hibernate.c3p0.max_statements" value="50"/>
+            <property name="hibernate.c3p0.idle_test_period" value="2000"/>
+        </properties>
+    </persistence-unit>
+</persistence>

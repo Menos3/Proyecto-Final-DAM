@@ -1,0 +1,51 @@
+.root {
+    -fx-font-size: 14px;
+    -fx-font-family: sans-serif;
+    -fx-background-color: #ffffff;
+}
+
+#jasper-button {
+    -fx-min-height: 32px;
+    -fx-min-width: 32px;
+    -fx-max-height: 32px;
+    -fx-max-width: 32px;
+    -fx-background-size: 32px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 90%;
+}
+
+#jasper-button:hover {
+    -fx-cursor: hand;
+}
+
+.jasper-button-print {
+    -fx-background-image: url("printer.png");
+}
+
+.jasper-button-save {
+    -fx-background-image: url("saveimg.png");
+}
+
+.jasper-button-first {
+    -fx-background-image: url("firstimg.png");
+}
+
+.jasper-button-back {
+    -fx-background-image: url("backimg.png");
+}
+
+.jasper-button-next {
+    -fx-background-image: url("nextimg.png");
+}
+
+.jasper-button-last {
+    -fx-background-image: url("lastimg.png");
+}
+
+.jasper-button-zoomIn {
+    -fx-background-image: url("zoomin.png");
+}
+
+.jasper-button-zoomOut {
+    -fx-background-image: url("zoomout.png");
+}

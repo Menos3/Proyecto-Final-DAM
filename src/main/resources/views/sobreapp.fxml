@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="298.0" prefWidth="394.0" styleClass="fons_formulari" stylesheets="@../styles/stylesApp.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.sergio.melado.m13.controllers.SobreAplicacioController">
+   <children>
+      <ImageView fitHeight="193.0" fitWidth="191.0" layoutX="108.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/psglogo.jpeg" />
+         </image>
+      </ImageView>
+      <Text layoutX="108.0" layoutY="255.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Autor: Sergio Melado Alonso DAM 2" wrappingWidth="226.00000144541264">
+         <font>
+            <Font size="14.0" />
+         </font></Text>
+      <Text layoutX="108.0" layoutY="281.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Versio: Final" wrappingWidth="191.00000144541264">
+         <font>
+            <Font size="14.0" />
+         </font></Text>
+   </children>
+</AnchorPane>

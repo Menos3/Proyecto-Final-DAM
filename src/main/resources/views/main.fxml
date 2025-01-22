@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.String?>
+<AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@../styles/stylesApp.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.sergio.melado.m13.controllers.MainController">
+   <children>
+      <BorderPane prefHeight="400.0" prefWidth="600.0" stylesheets="@../styles/styleLogin.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <MenuBar BorderPane.alignment="CENTER">
+              <menus>
+                <Menu id="idMenuSistema" mnemonicParsing="false" text="Sistema">
+                  <items>
+                    <MenuItem id="idSistema" fx:id="miConfiguracio" mnemonicParsing="false" onAction="#miConfiguracioOnAction" text="Configuracio" />
+                        <MenuItem id="idSistema" fx:id="miAdministracioUsuaris" mnemonicParsing="false" onAction="#miAdministracioUsuarisOnAction" text="Administracio d'usuaris " />
+                        <MenuItem id="idSistema" fx:id="miPersonalitzacio" mnemonicParsing="false" onAction="#miPersonalitzacioOnAction" text="Personalitzacio" />
+                        <MenuItem id="idSistema" fx:id="miSurt" mnemonicParsing="false" onAction="#miSurtOnAction" text="Surt" />
+                  </items>
+                </Menu>
+                  <Menu mnemonicParsing="false" text="Dispositius">
+                    <items>
+                      <MenuItem fx:id="miAdministracioDispositius" mnemonicParsing="false" onAction="#miAdministracioDispositiusOnAction" text="Administracio de Dispositius" />
+                    </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Ajuda">
+                    <items>
+                      <MenuItem fx:id="miSobreApp" mnemonicParsing="false" onAction="#miSobreAppOnAction" text="Sobre l'App. " />
+                    </items>
+                  </Menu>
+              </menus>
+            </MenuBar>
+         </top>
+         <styleClass>
+            <String fx:value="fons_formulari" />
+            <String fx:value="stage" />
+         </styleClass>
+      </BorderPane>
+   </children>
+</AnchorPane>

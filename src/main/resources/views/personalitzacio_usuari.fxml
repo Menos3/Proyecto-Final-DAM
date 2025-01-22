@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+<AnchorPane prefHeight="494.0" prefWidth="472.0" styleClass="fons_formulari" stylesheets="@../styles/stylesApp.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.sergio.melado.m13.controllers.PersonalitzacioUsuariController">
+   <children>
+      <Label layoutX="116.0" layoutY="144.0" text="Nom: *">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Label>
+      <Label layoutX="99.0" layoutY="183.0" text="Cognoms: *">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Label>
+      <Label layoutX="51.0" layoutY="222.0" text="Correu Electronic: *">
+      <font>
+         <Font name="System Bold" size="13.0" />
+      </font></Label>
+      <Label layoutX="115.0" layoutY="260.0" text="Telefon:" />
+      <Label layoutX="116.0" layoutY="296.0" text="Adreça:" />
+      <Label layoutX="105.0" layoutY="331.0" text="Codi Postal:" />
+      <Label layoutX="111.0" layoutY="370.0" text="Població:" />
+      <Label layoutX="125.0" layoutY="407.0" text="País:" />
+      <Label layoutX="120.0" layoutY="105.0" text="Login: *">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tfLogin" disable="true" layoutX="205.0" layoutY="102.0" styleClass="text-field_normal" />
+      <TextField fx:id="tfNom" layoutX="205.0" layoutY="141.0" styleClass="text-field_normal" />
+      <TextField fx:id="tfCognoms" layoutX="205.0" layoutY="180.0" styleClass="text-field_normal" />
+      <TextField fx:id="tfEmail" layoutX="205.0" layoutY="219.0" styleClass="text-field_normal" />
+      <TextField fx:id="tfTelefon" layoutX="205.0" layoutY="256.0" styleClass="text-field_normal" />
+      <TextField fx:id="tfAdreca" layoutX="205.0" layoutY="292.0" styleClass="text-field_normal" />
+      <TextField fx:id="tfCodiPostal" layoutX="205.0" layoutY="327.0" />
+      <TextField fx:id="tfPoblacio" layoutX="205.0" layoutY="366.0" />
+      <TextField fx:id="tfPais" layoutX="205.0" layoutY="403.0" />
+      <Button id="buttons" fx:id="btGuardar" layoutX="412.0" layoutY="435.0" mnemonicParsing="false" onAction="#btGuardarOnAction" prefHeight="41.0" prefWidth="87.0" styleClass="btguardar" />
+      <Label fx:id="lbTitol" layoutX="95.0" layoutY="26.0" text="Personalització d'Usuari" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <Button id="buttons" fx:id="btCanviContrasenya" layoutX="19.0" layoutY="440.0" mnemonicParsing="false" onAction="#btCanviContrasenyaOnAction" styleClass="btcanvicontrasenya" />
+   </children>
+</AnchorPane>

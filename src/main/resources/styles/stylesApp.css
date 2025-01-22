@@ -1,0 +1,104 @@
+.stage{
+
+}
+
+.text-field_radius{
+    -fx-shape: "M170,0 H0 V30 H200 Z";
+}
+
+.text-field_normal{
+    -fx-border-radius: 20px;
+
+}
+
+.fons_formulari{
+    -fx-background-color: linear-gradient(to left, #1c2be4, #1ce4e4);
+}
+
+.text-field_focused{
+    -fx-background-color: #eb0014;
+}
+
+.menu:hover, .menu:showing{
+    -fx-background-color: red;
+
+}
+
+.menu-item:hover, .menu-item:selected, .menu-item:focused{
+    -fx-background-color: red;
+}
+
+.text-field:focused{
+    -fx-background-color: #f7ff5a;
+}
+
+.tab {
+    -fx-background-color: #ff6800;
+}
+
+#buttons {
+    -fx-min-height: 40px;
+    -fx-min-width: 40px;
+    -fx-max-height: 40px;
+    -fx-max-width: 40px;
+    -fx-background-size: 40px;
+    -fx-alignment: center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 90%;
+}
+
+.btguardar {
+    -fx-background-image: url('../img/btguarda.png');
+}
+
+.btcancela{
+    -fx-background-image: url("../img/btfals.png");
+}
+
+.btguardar:pressed{
+    -fx-background-image: url('../img/btguardat.png');
+}
+
+.btcanvicontrasenya {
+    -fx-background-image: url('../img/btcanvicontrasenya.jpg');
+}
+
+.bteliminar {
+    -fx-background-image: url('../img/bteliminar.png');
+}
+
+.btmodificar {
+    -fx-background-image: url('../img/btmodificar.png');
+}
+
+.btnou {
+    -fx-background-image: url('../img/btnou.png');
+}
+
+.btsortir {
+    -fx-background-image: url('../img/btsortir.png');
+}
+
+.btbuscar {
+    -fx-background-image: url('../img/btbuscar.png');
+}
+
+.btbuscarcomarca {
+    -fx-background-image: url('../img/btbuscarcomarca.png');
+}
+
+.btmonitoritzar {
+    -fx-background-image: url('../img/btmonitoritzar.png');
+}
+
+.btgenerarinforme {
+    -fx-background-image: url('../img/btgenerarinforme.png');
+}
+
+.btinitstategraficainfinita {
+    -fx-background-image: url('../img/btgenerargraficainfinita.png');
+}
+
+.btfinalstategraficainfinita {
+    -fx-background-image: url('../img/btparargraficainfinita.png');
+}

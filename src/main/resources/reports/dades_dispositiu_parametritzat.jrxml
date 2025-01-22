@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.12.2.final using JasperReports Library version 6.12.2-75c5e90a222ab406e416cbf590a5397028a52de3  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="dades_dispositiu" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f126f434-9b69-4f9d-9e85-4bb06cc0017e">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<subDataset name="dummyDataDataSet" uuid="df335c6b-235a-481b-a14c-43d3d0607666">
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+		<field name="time" class="java.lang.String"/>
+		<field name="airtime" class="java.lang.Double"/>
+		<field name="comptador" class="java.lang.Long"/>
+		<field name="humetat" class="java.lang.Double"/>
+		<field name="presio" class="java.lang.Double"/>
+		<field name="valorAleatori" class="java.lang.Long"/>
+		<field name="temperatura" class="java.lang.Double"/>
+		<field name="tempsFuncionant" class="java.lang.Long"/>
+	</subDataset>
+	<subDataset name="dispositiuAdaptat" uuid="2f1253b5-8b74-4719-bee0-f31e4c377d7c">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Sample DB"/>
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+		<field name="id" class="java.lang.Integer"/>
+		<field name="descripcio" class="java.lang.String"/>
+		<field name="dataDesde" class="java.lang.String"/>
+		<field name="dataFinsA" class="java.lang.String"/>
+		<field name="dummyData" class="java.util.List"/>
+		<field name="dummyDataDataSource" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	</subDataset>
+	<parameter name="P_TITOL_INFORME" class="java.lang.String"/>
+	<parameter name="P_ID_DISPOSITIU" class="java.lang.Integer"/>
+	<parameter name="P_DESC_DISPOSITIU" class="java.lang.String"/>
+	<parameter name="P_DATA_DESDE" class="java.lang.String"/>
+	<parameter name="P_DATA_FINSA" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="dummyDataDataSource" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<field name="dispositiuAdaptat" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="67" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="362" height="30" uuid="45d0d3a6-3196-4439-801d-0df2293906cf"/>
+				<textFieldExpression><![CDATA[$P{P_TITOL_INFORME}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="370" y="0" width="178" height="20" uuid="0d956eec-8de0-42b6-81da-4bbdd8b78f77"/>
+				<textFieldExpression><![CDATA["DESDE: " + $P{P_DATA_DESDE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="370" y="20" width="178" height="20" uuid="96315124-99b3-4f7f-95f9-20d3c91a9b64"/>
+				<textFieldExpression><![CDATA["FINS A: " + $P{P_DATA_FINSA}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="51" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="10" width="100" height="30" uuid="3fa30a14-febf-4799-8477-cd138613610a"/>
+				<textFieldExpression><![CDATA["ID: " + $P{P_ID_DISPOSITIU}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="106" y="10" width="380" height="30" uuid="2651324a-79a5-4160-9ef3-d40e8c51a3d9"/>
+				<textFieldExpression><![CDATA[$P{P_DESC_DISPOSITIU}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="24" splitType="Stretch">
+			<staticText>
+				<reportElement x="60" y="0" width="100" height="20" uuid="cc69400c-05d1-4f49-9fe3-deee5df88e34"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Humitat]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="160" y="0" width="100" height="20" uuid="0826243e-62d2-4c0c-852c-976632eba09f"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Temperatura]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement mode="Transparent" x="60" y="20" width="200" height="1" uuid="e1df672b-7d88-4a16-9798-e0fe5e6f8fbe"/>
+				<graphicElement>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</graphicElement>
+			</rectangle>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="22" splitType="Stretch">
+			<componentElement>
+				<reportElement x="60" y="1" width="410" height="20" uuid="f8bf45a7-3533-4b50-8cba-c6203fbbab76"/>
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
+					<datasetRun subDataset="dummyDataDataSet" uuid="5a809075-1cce-466c-9330-5ea362fdd650">
+						<datasetParameter name="REPORT_CONNECTION">
+							<datasetParameterExpression><![CDATA[]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="REPORT_DATA_SOURCE">
+							<datasetParameterExpression><![CDATA[$F{dummyDataDataSource}]]></datasetParameterExpression>
+						</datasetParameter>
+						<dataSourceExpression><![CDATA[$P{REPORT_CONNECTION}]]></dataSourceExpression>
+					</datasetRun>
+					<jr:listContents height="20" width="410">
+						<textField>
+							<reportElement x="0" y="0" width="100" height="20" uuid="a4c732c0-4ad8-4f8d-8dcb-f95088e656ba"/>
+							<textFieldExpression><![CDATA[$F{humetat}]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="100" y="0" width="100" height="20" uuid="96475b1f-3ca2-4bd8-a714-efd494eead0c"/>
+							<textFieldExpression><![CDATA[$F{temperatura}]]></textFieldExpression>
+						</textField>
+					</jr:listContents>
+				</jr:list>
+			</componentElement>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="34" splitType="Stretch">
+			<textField>
+				<reportElement x="459" y="0" width="52" height="19" uuid="57736790-5503-4a20-b897-5d50f5349c08"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER} + " de "]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="512" y="0" width="36" height="19" uuid="38d2ce99-9de4-45d1-beb6-df197dccfb0f"/>
+				<textElement textAlignment="Left"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="-1" y="-1" width="549" height="1" uuid="eb3abd56-b068-4917-8eea-51b8792b3916"/>
+			</rectangle>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
